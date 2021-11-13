@@ -1,0 +1,20 @@
+tcp-server:
+  tcp:
+    bind-addr: 0.0.0.0
+    bind-port: 1935
+  udp:
+  - bind-addr: 127.0.0.2
+    connect-addr: 127.0.0.2
+    connect-port: 19350
+  - bind-addr: 127.0.0.3
+    connect-addr: 127.0.0.3
+    connect-port: 19350
+
+tcp-client:
+  tcp:
+    #bind-addr: localhost
+    connect-addr: highfive.container.training
+    connect-port: 80
+  udp:
+  - bind-addr: 0.0.0.0
+    bind-port: 19350
